@@ -1,3 +1,5 @@
+import dotenv from 'dotenv';
+dotenv.config({ path: `${process.cwd()}/.env` });
 import AppError  from "../util/appError.js"; 
 
 const sendErrorDev = (error, response) => {
