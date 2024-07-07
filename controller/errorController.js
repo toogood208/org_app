@@ -28,7 +28,7 @@ const sendErrorProd = (error, response) => {
     return response.status(statusCode).json({
       errors: error.errors.length > 0 ? error.errors : [{
         status,
-        message: 'Something went wrong!',
+        message: message,
       }],
     });
   }
