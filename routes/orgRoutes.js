@@ -11,16 +11,16 @@ import  {authentication}  from '../controller/authController.js';
 const router = express.Router();
 
 router
-  .route('/organizations')
+  .route('/organisations')
   .post(authentication, createOrganization)
   .get(authentication, getOrganization);
 
 router.route('/users/:id').get(authentication, getUserById);
 
 router
-  .route('/organizations/:orgId')
+  .route('/organisations/:orgId')
   .get(authentication, getSingleOrganization);
 
-router.route('/organizations/:orgId/users').post(addUserToOrganozation);
+router.route('/organisations/:orgId/users').post(addUserToOrganozation);
 
 export default router;
